@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>King Kayak</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css/main.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="nav navbar-expand-sm navbar-dark bg-dark">
+                <a class="navbar-brand" href="{{ url_for('main.home') }}">King Kayak</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url_for('main.home') }}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('main.shop') }}">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('main.about') }}">About</a>
+                        </li>
+                    </ul>
+                    <ul class='navbar-nav m1-auto'>
+                        {% if not current_user.is_authenticated %}
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('auth.register') }}">Register</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        
+        </header>
+
+        <h4 class='about'>About Us</h4>
+
+        <p class='para'>Welcome to King Kayak, your number one source for all things Kayaki. We're dedicated to providing you the very best
+            of Kayaks, with an emphasis on quality, craftmanship, and style. 
+            <br>
+            <br>
+            Founded in 1840 by Prince Kayak, King Kayak has come a long way from its beginnings in Antartica. When
+            Prince Kayak first started out, his passion for escaping the tundra led him to design and craft a strudy, quality 
+            kayak that everyone loved. His passion did not end there, after escaping, his love for kayaks drove him to start his own business.
+            <br>
+            <br>
+            We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please
+            don't hesitate to contact us.
+            <br>
+            <br>
+            Sincerely,
+            <br>
+            <br>
+            Kink Kayak
+        </p>
+
+        <div class='team'> 
+            <h2>Meet The Team</h2>
+            <img src="static/images/team.jpg" alt="">
+        </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+

@@ -1,0 +1,101 @@
+.background {
+  background-image: url("../images/background.jpg");
+  width: 100%;
+  height: 100vh;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  display: grid;
+  position: relative;
+  place-items: center;
+}
+
+.text1 {
+    color: white;
+    text-align: center;
+    /*line-height: 550px;
+    padding-left: 50px;*/
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+  text-decoration:none;
+  color: deepskyblue;
+}
+
+.rainbow-button {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 14px;
+  font-weight:bold;
+  margin: 5px;
+  color: #fff;
+}
+
+.rainbow-button:after {
+  content:attr(alt);
+  width:100px;
+  height:40px;
+  background-color:#191919;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 1px solid #ddd
+}
+.rainbow-button:hover {
+  animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.login{
+  text-align: center;
+  padding-top: 17vh;
+}
+
+.register{
+  text-align: center;
+  padding-top: 17vh;
+}
+
+.loginbox{
+  position: absolute;
+}
+
+.card{
+  color: coral;
+}
+
+.col-8{
+  flex: 66%;
+  max-width: 100%;
+}
+
+.team{
+  text-align: center;
+}
+
+.about{
+  text-align: center;
+}
+
+.para{
+  text-align: center;
+}
